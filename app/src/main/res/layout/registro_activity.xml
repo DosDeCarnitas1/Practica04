@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/a">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="115dp"
+        android:text="Becas de transporte"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgLogoSmall"
+        android:layout_width="115dp"
+        android:layout_height="112dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="148dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo"
+        app:srcCompat="@drawable/arcticons__transport" />
+
+    <EditText
+        android:id="@+id/edtFolio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="125dp"
+        android:ems="10"
+        android:hint="Número de folio"
+        android:inputType="numberPassword"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogoSmall" />
+
+    <EditText
+        android:id="@+id/edtInstitucion"
+        android:layout_width="203dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="105dp"
+        android:ems="10"
+        android:hint="Institución de procedencia"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtFolio" />
+
+    <EditText
+        android:id="@+id/edtApellido"
+        android:layout_width="202dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="105dp"
+        android:ems="10"
+        android:hint="Apellido(s)"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtInstitucion" />
+
+    <EditText
+        android:id="@+id/edtNombre"
+        android:layout_width="203dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="105dp"
+        android:ems="10"
+        android:hint="Nombre(s)"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtApellido" />
+
+    <Spinner
+        android:id="@+id/spnNivel"
+        android:layout_width="349dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtNombre" />
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="50dp"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:text="Registrar"
+        app:layout_constraintEnd_toStartOf="@+id/btnLimpiar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spnNivel" />
+
+    <Button
+        android:id="@+id/btnLimpiar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="74dp"
+        android:onClick="onClick"
+        android:text="Limpiar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnRegistrar"
+        app:layout_constraintTop_toBottomOf="@+id/spnNivel" />
+</androidx.constraintlayout.widget.ConstraintLayout>
